@@ -1,21 +1,18 @@
-#include <stdlib.h>
-int putchar(int c);
+#include <stdio.h>
+
 /**
- * main - signs a random number to n
- * @void - takes no argument
- *
- * Description: this function prints out the last digit of a number
+ * mian - prints the alphabet in lowercase,
+ * followed by a new line
  * Return: Always 0
  */
 
 int main(void)
 {
-	char alp[26] = "abcdefghijklmnopqrstuvwxyz";
-	int i;
+	char ch;
 
-	for (i = 0; i < 26; i++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(alp[i]);
+		putchar(ch);
 	}
 	putchar('\n');
 	return (0);
