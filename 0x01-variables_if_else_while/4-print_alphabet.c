@@ -1,28 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
- * main - prints the alphabet
- * @void - not return value
- *
- * Description: main prints the alphabet in lower case
+ * main - prints the alphabet in lowercase,
+ * followed by a new line, excetion of q and e
  * Return: 0 always
  */
 
 int main(void)
 {
-	char lower = 'a';
+	char ch = 'a';
 
-	while (lower <= 'z')
+	while (ch <= 'z')
 	{
-		if (lower == 'e' || lower == 'q')
+		if (ch != 'e' && ch != 'q')
 		{
-			++lower;
+			putchar(ch);
 		}
-		putchar(lower);
-		++lower;
+		ch++;
 	}
 	putchar('\n');
-
 	return (0);
 }
