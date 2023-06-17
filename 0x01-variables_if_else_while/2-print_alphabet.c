@@ -1,6 +1,5 @@
 #include <stdlib.h>
-#include <time.h>
-
+int putchar(int c);
 /**
  * main - signs a random number to n
  * @void - takes no argument
