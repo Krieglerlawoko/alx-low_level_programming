@@ -84,9 +84,9 @@ int main(int argc, char *argv[])
 		}
 
 		wrt = write(putFil, bu, rid);
-		if (cpFil == -1 || wrt == -1)
+		if (putFil == -1 || wrt == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't writ to %s\n", argv[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(bu);
 
 			exit(99);
