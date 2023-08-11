@@ -12,22 +12,21 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *bu;
-	ssize_t fd;
 	ssize_t fil;
+	ssize_t wrt;
 	ssize_t rid;
 
 	fil = open(filename, O_RDONLY);
 
 	if (fil == -1)
 		return (0);
-
-	b = malloc(sizeof(char) * letters);
-	rid = read(fd, bu, letters);
-	writ = write(STDOUT_FILENO, buff, rid);
+	bu = malloc(sizeof(char) * letters);
+	rid = read(fil, bu, letters);
+	wrt = write(STDOUT_FILENO, bu, rid);
 
 	free(bu);
 	close(fil);
 
-	return (rid);
+	return (wrt);
 }
 
