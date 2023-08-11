@@ -8,19 +8,21 @@
  * Return: on fail returns NULL, --1 if no permission else 1
  */
 
-int append_text_to_file(const *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int fil;
 	int writ;
 	int lnth = 0;
 
+	if (filename != NULL)
+		return (-1);
 	if (text_content != NULL)
 	{
 		for (lnth = 0; text_content[lnth];)
 			lnth++;
 	}
 
-	fil = open(filename, O_WRONGLY | O_APPEND);
+	fil = open(filename, O_WRONLY | O_APPEND);
 	writ = write(fil, text_content, lnth);
 	if (fil == -1 || writ == -1)
 		return (-1);
