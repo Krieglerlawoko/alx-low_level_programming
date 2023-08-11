@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
 
 	bu = create_buffer(argv[2]);
 	cpFil = open(argv[1], O_RDONLY);
-	rid = read(cdFil, bu, 1024);
-	putFil = open(argv[2], O_CREAT | O_TUNC, 0664);
+	rid = read(cpFil, bu, 1024);
+	putFil = open(argv[2], O_CREAT | O_TRUNC, 0664);
 
 	do {
 		if (cpFil == -1 || rid == -1)
