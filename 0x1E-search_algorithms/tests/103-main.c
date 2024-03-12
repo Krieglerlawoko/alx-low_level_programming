@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../search_algos.h"
+#include "search_algos.h"
 
 /**
  * main - Entry point
@@ -10,7 +10,7 @@
 int main(void)
 {
     int array[] = {
-        1, 2, 3, 4, 5, 8, 13, 16, 19, 20, 24, 55, 62, 63, 77, 99
+        0, 1, 2, 3, 4, 7, 12, 15, 18, 19, 23, 54, 61, 62, 76, 99
     };
     size_t size = sizeof(array) / sizeof(array[0]);
 
